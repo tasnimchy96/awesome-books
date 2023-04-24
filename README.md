@@ -23,8 +23,6 @@
 
 **[Awesome Books]** is a microverse project where we build a basic website that allows users to add/remove books from a list. We achieved that by using JavaScript objects and arrays. We also dynamically modified the DOM and add basic events.
 
-
-
 ## :hammer_and_wrench: Built With
 
 ### Tech Stack
@@ -57,6 +55,7 @@ git clone https://github.com/tasnimchy96/bookStore.github.io.git
 cd bookStore.github.io.git
 code .
 ```
+
 ### Install
 
 Install this project using the cloned repo or download and use the files to your local machine.
@@ -65,6 +64,7 @@ Install this project using the cloned repo or download and use the files to your
 cd <path-to-the-cloned-repo>
 code .
 ```
+
 ### Usage
 
 To run the project open the index.html file in your web browser or you can also open live server from the IDE.
@@ -74,6 +74,7 @@ To run the project open the index.html file in your web browser or you can also 
 No test are available
 
 ### Project-Presentation
+
 - We will add it later.
 
 ### :rocket: Live-Demo
@@ -88,9 +89,11 @@ No test are available
 - Twitter:[@tasnimchy96](https://twitter.com/tasnimchy96)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/tasnim-ahmed-chowdhury-b4504625b)
 
-:bust_in_silhouette: **Kifle**
+:bust_in_silhouette: **Kifle Haile**
 
-- GitHub: []()
+- GitHub: [@kifle23](https://github.com/kifle23)
+- Twitter: [@kifle12](https://twitter.com/KifleHaile12)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/kifle-haile-5a613761)
 
 ## :telescope: Future Features
 
@@ -112,4 +115,5 @@ If you like this project feel free to share with your friends.
 I would like to thank Microverse for this amazing exercise and also like to thank for the kind collaboration of Samreen Mujtaba.
 
 ## 📝 License <a name="license"></a>
+
 This project is [MIT](./LICENSE.md) licensed.
