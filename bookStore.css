@@ -1,7 +1,81 @@
 * {
   margin: 5px;
+
+}
+
+body {
+  width: 40vw;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+  padding: 1rem 0;
 }
 
 li {
   list-style-type: none;
+}
+
+#bookList {
+  border: 2px solid #000;
+  margin-bottom: 1rem;
+}
+
+.book {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #e9e9e9;
+  margin: 0;
+}
+
+.book:nth-child(even) {
+  background-color: #fff;
+}
+
+.book button {
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #000;
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+hr {
+  width: 15%;
+  border: 1px solid #000;
+  margin-bottom: 1rem;
+}
+
+#addForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#addForm button {
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #000;
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+  cursor: pointer;
+  display: flex;
+  align-self: self-end;
+}
+
+#addForm input {
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #000;
+  border-radius: 0.25rem;
+  padding: 0.5rem;
 }
