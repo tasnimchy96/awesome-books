@@ -1,26 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Awesome books</title>
-  <link rel="stylesheet" href="./bookStore.css" />
-</head>
-<body>
-  <h1>All awesome books</h1>
-  <div id="bookList"></div>
-  <div class="form-container">
-    <hr />
-    <h2>Add a new book</h2>
-    <form id="addForm">
-      <input type="text" placeholder="Title" id="title" required />
-      <br />
-      <input type="text" placeholder="Author" id="author" required />
-      <br />
-      <button type="submit" class="btn-add">Add</button>
-    </form>
-  </div>
-  <script type="module" src="./bookStore.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Awesome books</title>
+    <link rel="stylesheet" href="./bookStore.css" />
+  </head>
+  <body>
+    <header>
+      <a href="" class="logo">Awesome Books</a>
+      <nav>
+        <ul>
+          <li class="right-border"><a href="#list-info" id="list">List</a></li>
+          <li class="right-border">
+            <a href="#ad-new-info" id="add-new">Add New</a>
+          </li>
+          <li><a href="#contact-info" id="contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="date-time">
+      <p id="date-time"></p>
+    </div>
+
+    <section class="list" id="list-info">
+      <h1>All awesome books</h1>
+      <table id="bookList"></table>
+    </section>
+
+    <section class="add-new" id="add-new-info">
+      <h1>Add a new book</h1>
+      <form id="addForm">
+        <input type="text" placeholder="Title" id="title" required />
+        <input type="text" placeholder="Author" id="author" required />
+        <button type="submit">Add</button>
+      </form>
+    </section>
+
+    <section class="contact" id="contact-info">
+      <h1>Contact Information</h1>
+      <p>
+        Do you have any questions or you just want to say "Hello"? <br />
+        You can reach out to us!
+      </p>
+      <ul class="contact-info">
+        <li>Our email: tasnim.achy96@gmail.com</li>
+        <li>Our phone number: +8801621693614</li>
+        <li>Our address: Sylhet, Bangladesh</li>
+      </ul>
+    </section>
+
+    <footer>
+      <p>Copyright @TasnimAhmedChowdhury</p>
+    </footer>
+
+    <script src="./bookStore.js"></script>
+    <script src="./navigation.js"></script>
+    <script src="./dateTime.js"></script>
+  </body>
 </html>
