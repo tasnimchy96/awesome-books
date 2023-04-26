@@ -1,16 +1,20 @@
-import Book from './book.js';
-
 class BookCollection {
   constructor() {
     this.books = JSON.parse(localStorage.getItem('books')) || [];
-    this.bookList = document.querySelector('#bookList');
+    this.bookList = document.getElementById('bookList');
+    this.addForm = document.getElementById('addForm');
+    this.addForm.addEventListener('submit', this.addBook.bind(this));
+    this.displayBooks();
   }
 
-  addNewBook(title, author) {
-    const newBook = new Book(title, author);
-    this.books.push(newBook);
+  addBook(event) {
+    event.preventDefault();
+    const title = document.getElementById('title').value;
+    const author = document.getElementById('author').value;
+    this.books.push({ title, author });
     localStorage.setItem('books', JSON.stringify(this.books));
     this.displayBooks();
+    event.target.reset();
   }
 
   removeBook(index) {
@@ -20,49 +24,25 @@ class BookCollection {
   }
 
   displayBooks() {
-    this.bookList = document.getElementById('bookList');
     this.bookList.innerHTML = '';
-
     this.books.forEach((book, index) => {
-      const li = document.createElement('li');
-      li.innerHTML = `
-        <p>${book.title}</p>
-        <p>${book.author}</p>        
+      const tr = document.createElement('tr');
+      tr.innerHTML = `
+        <td>"${book.title}" by ${book.author}</td>
       `;
-
       const removeBtn = document.createElement('button');
       removeBtn.textContent = 'Remove';
       removeBtn.addEventListener('click', () => {
         this.removeBook(index);
       });
 
-      li.appendChild(removeBtn);
-      li.className = 'book';
-      this.bookList.appendChild(li);
+      removeBtn.classList.add('removeBtn');
+      tr.appendChild(removeBtn);
+      this.bookList.appendChild(tr);
     });
   }
 }
 
-const bookForm = document.getElementById('addForm');
+const bookCollection = new BookCollection();
 
-const myCollection = new BookCollection();
-
-function addBook(e) {
-  e.preventDefault();
-
-  const titleInput = document.getElementById('title');
-  const authorInput = document.getElementById('author');
-
-  if (titleInput.value === '' || authorInput.value === '') {
-    return;
-  }
-
-  myCollection.addNewBook(titleInput.value, authorInput.value);
-
-  titleInput.value = '';
-  authorInput.value = '';
-}
-
-bookForm.addEventListener('submit', addBook);
-
-myCollection.displayBooks();
+bookCollection();
